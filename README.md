@@ -1,4 +1,11 @@
 practice-django
 ===============
 
-Django tutorials around the web
+Practice Diango - Listing all the tutorial that you can find in the web. (WIP)
+
+INSTALLATION
+==============
+- Install Pip
+- Install virtualenv
+- Create a new virtualenv (e.g. virtualenv venv --distribute)
+- Activate the virtualenv (e.g. source venv/bin/activate)
