@@ -10,3 +10,7 @@ INSTALLATION
 - Create a new virtualenv (e.g. virtualenv venv --distribute)
 - Activate the virtualenv (e.g. source venv/bin/activate)
 - Install Django using pip (e.g. pip install Django)
+
+LESSONS
+===============
+- [Django Tutorial](http://goo.gl/zNca3a)
