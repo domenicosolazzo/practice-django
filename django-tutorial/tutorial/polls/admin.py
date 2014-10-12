@@ -9,3 +9,4 @@ class QuestionAdmin(admin.ModelAdmin):
         ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
     ]
 admin.site.register(Question, QuestionAdmin)
+admin.site.register(Choice)
