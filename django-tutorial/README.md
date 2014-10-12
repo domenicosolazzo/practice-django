@@ -14,3 +14,4 @@ INSTALLATION
 - Add the polls app in the main settings as INSTALLED_APP
 - Run makemigrations for the polls app (python manage.py makemigrations polls)
 - Run migrate to create the tables for the previously created models
+- Create a super user (python manage.py createsuperuser)
