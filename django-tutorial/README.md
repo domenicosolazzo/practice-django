@@ -15,3 +15,12 @@ INSTALLATION
 - Run makemigrations for the polls app (python manage.py makemigrations polls)
 - Run migrate to create the tables for the previously created models
 - Create a super user (python manage.py createsuperuser)
+
+SOURCE
+=============
+- [Part I](http://goo.gl/SzSReE)
+- [Part II](http://goo.gl/SiIPIK)
+- [Part III](http://goo.gl/002Y3o)
+- [Part IV](http://goo.gl/Gd7nm4)
+- [Part V](http://goo.gl/6OEAcc)
+- [Part VI](http://goo.gl/a3JMkT)
