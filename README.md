@@ -14,5 +14,8 @@ INSTALLATION
 LESSONS
 ===============
 - [Django Tutorial](http://goo.gl/zNca3a)
-- [Django on Heroku]()
+- [Django on Heroku](#)
+- [Authentication](#)
+- [Caching](#)
+- [Models](#)
 
