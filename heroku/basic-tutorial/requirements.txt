@@ -1,4 +1,4 @@
-Django==1.7
+git+https://github.com/django/django.git@1.7c2
 wsgiref==0.1.2
 dj-database-url==0.3.0
 dj-static==0.0.6
