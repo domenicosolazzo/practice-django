@@ -11,6 +11,7 @@ class Person(models.Model):
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
 
 class Musician(models.Model):
+    id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=254)
     last_name = models.CharField(max_length=254)
     instrument = models.CharField(max_length=100)
