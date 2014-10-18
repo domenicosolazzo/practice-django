@@ -21,3 +21,10 @@ class Album(models.Model):
     name = models.CharField(max_length=254)
     release_date = models.DateField()
     num_stars = models.IntegerField()
+
+
+class Topping(models.Model):
+    type = models.CharField(max_length=254)
+
+class Pizza(models.Model):
+    toppings = models.ManyToManyField(Topping)
