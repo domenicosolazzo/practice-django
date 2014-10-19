@@ -12,6 +12,7 @@ class Person(models.Model):
 
     # Custom managers
     people = models.Manager() # Person.people.all()
+    domenicos = PeopleManager() # Person.domenicos.all()
 
 class Musician(models.Model):
     id_musician = models.AutoField(primary_key=True)
@@ -71,4 +72,11 @@ class Waiter(models.Model):
 
     def __unicode__(self):              # __unicode__ on Python 2
         return "%s the waiter at %s" % (self.name, self.restaurant)
+
+
+# Custom managers
+class PeopleManager(models.Manager):
+    def get_queryset(self):
+        return super(PeopleManager, self).get_queryset().filter(first_name__startswith='Domenico')
+
 
