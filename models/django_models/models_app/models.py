@@ -10,9 +10,6 @@ class Person(models.Model):
     last_name = models.CharField(max_length=254)
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
 
-    # Custom managers
-    people = models.Manager() # Person.people.all()
-    domenicos = PeopleManager() # Person.domenicos.all()
 
 class Musician(models.Model):
     id_musician = models.AutoField(primary_key=True)
@@ -74,9 +71,5 @@ class Waiter(models.Model):
         return "%s the waiter at %s" % (self.name, self.restaurant)
 
 
-# Custom managers
-class PeopleManager(models.Manager):
-    def get_queryset(self):
-        return super(PeopleManager, self).get_queryset().filter(first_name__startswith='Domenico')
 
 
