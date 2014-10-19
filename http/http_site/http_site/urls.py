@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     # A request to /articles/2003/03/03/ would call
     # the function views.article_detail(request, year='2003', month='03', day='03')
     url(r'^articles/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/$', views.article_detail),
-
+    # Defaults for view arguments
+    url(r'^blog/page(?P<num>\d+)/$', views.page),
     url(r'^admin/', include(admin.site.urls))
 )
