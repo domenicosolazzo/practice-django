@@ -38,16 +38,32 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
               <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <marker date="1413739688000" expanded="true" signature="57:324" placeholder="..." />
+                <marker date="1413739688000" expanded="true" signature="356:558" placeholder="..." />
+                <marker date="1413739688000" expanded="true" signature="586:838" placeholder="..." />
+                <marker date="1413739688000" expanded="true" signature="1259:1303" placeholder="..." />
+                <marker date="1413739688000" expanded="true" signature="1331:1378" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/django_models/manager_app/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+              <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/django_models/manager_app/models.py">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/http/http_site/http_site/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7077326" vertical-offset="0" max-vertical-offset="763">
-              <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+            <state vertical-scroll-proportion="0.7470511" vertical-offset="0" max-vertical-offset="1350">
+              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -66,6 +82,7 @@
         <option value="$PROJECT_DIR$/models/django_models/models_app/models.py" />
         <option value="$PROJECT_DIR$/models/django_models/django_models/settings.py" />
         <option value="$PROJECT_DIR$/models/django_models/manager_app/models.py" />
+        <option value="$PROJECT_DIR$/http/http_site/http_site/settings.py" />
       </list>
     </option>
   </component>
@@ -130,11 +147,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="django_models" />
+              <option name="myItemId" value="http_site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -148,15 +165,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="http" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="django_models" />
+              <option name="myItemId" value="http_site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="manager_app" />
+              <option name="myItemId" value="http_site" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -221,7 +238,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1413739688000" expanded="true" signature="57:324" placeholder="..." />
+            <marker date="1413739688000" expanded="true" signature="356:558" placeholder="..." />
+            <marker date="1413739688000" expanded="true" signature="586:838" placeholder="..." />
+            <marker date="1413739688000" expanded="true" signature="1259:1303" placeholder="..." />
+            <marker date="1413739688000" expanded="true" signature="1331:1378" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -235,8 +258,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/django_models/manager_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7077326" vertical-offset="0" max-vertical-offset="763">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
           <caret line="36" column="61" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http/http_site/http_site/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7470511" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
           <folding />
         </state>
       </provider>
