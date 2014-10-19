@@ -34,4 +34,5 @@ class Person(models.Model):
 
     # Custom managers
     people = PersonManager() # Person.people.all()
+    people_qs = PersonQuerySet.as_manager() #Person.people_qs.all()
     domenicos = PeopleManager() # Person.domenicos.all()
