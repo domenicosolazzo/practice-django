@@ -10,6 +10,9 @@ class Person(models.Model):
     last_name = models.CharField(max_length=254)
     shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
 
+    # Custom managers
+    people = models.Manager() # Person.people.all()
+
 class Musician(models.Model):
     id_musician = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=254)
