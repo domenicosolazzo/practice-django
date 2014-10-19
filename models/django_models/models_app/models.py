@@ -21,6 +21,9 @@ class Album(models.Model):
     name = models.CharField(max_length=254)
     release_date = models.DateField()
     num_stars = models.IntegerField()
+    class Meta:
+        ordering = ["release_date"]
+        verbose_name_plural = "albums"
 
 class Group(models.Model):
     name = models.CharField(max_length=128)
