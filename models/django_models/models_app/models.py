@@ -26,7 +26,7 @@ class Group(models.Model):
     name = models.CharField(max_length=128)
     members = models.ManyToManyField(Person, through='Membership')
 
-    def __unicode__(self):              
+    def __unicode__(self):
         return self.name
 
 class Membership(models.Model):
@@ -41,3 +41,28 @@ class Topping(models.Model):
 
 class Pizza(models.Model):
     toppings = models.ManyToManyField(Topping)
+
+
+## One to One field
+class Place(models.Model):
+    name = models.CharField(max_length=50)
+    address = models.CharField(max_length=80)
+
+    def __unicode__(self):              # __unicode__ on Python 2
+        return "%s the place" % self.name
+
+class Restaurant(models.Model):
+    place = models.OneToOneField(Place, primary_key=True)
+    serves_hot_dogs = models.BooleanField(default=False)
+    serves_pizza = models.BooleanField(default=False)
+
+    def __unicode__(self):              # __unicode__ on Python 2
+        return "%s the restaurant" % self.place.name
+
+class Waiter(models.Model):
+    restaurant = models.ForeignKey(Restaurant)
+    name = models.CharField(max_length=50)
+
+    def __unicode__(self):              # __unicode__ on Python 2
+        return "%s the waiter at %s" % (self.name, self.restaurant)
+
