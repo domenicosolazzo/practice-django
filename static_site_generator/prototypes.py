@@ -21,6 +21,7 @@ settings.configure(
     SITE_OUTPUT_DIRECTORY=os.path.join(BASE_DIR, '_build'),
     # Enable static content to live inside _build directory
     STATIC_ROOT=os.path.join(BASE_DIR, '_build', 'static'),
+    STATICFILES_STORAGE='django.contrib.staticfiles.storage.CachedStaticFilesStorage'
 )
 
 if __name__ == "__main__":
