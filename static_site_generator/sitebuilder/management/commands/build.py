@@ -23,7 +23,7 @@ class Command(BaseCommand):
 		# Copy all of the site static resources in the STATIC_ROOT
 		call_command('collectstatic', interactive=False, clear=True, verbosity=0)
 		client = Client()
-		for page in get_pages(url):
+		for page in get_pages():
 			# Collect all the '.html' files
 			url = reverse('page', kwargs={'slug':page})
 			response = client.get(url)
