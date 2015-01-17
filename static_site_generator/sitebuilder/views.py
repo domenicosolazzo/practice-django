@@ -1,4 +1,5 @@
 import os
+import json
 from django.conf import settings
 from django.http import Http404
 from django.shortcuts import render
@@ -24,8 +25,8 @@ def get_page_or_404(name):
     meta = None
     for i, node in enumerate(list(page.nodelist)):
     	if isinstance(node, BlockNode) and node.name == 'context':
-			meta = page.nodelist.pop(i)
-    		break
+			meta = page.nodelist.pop(i) 
+			break
     page._meta = meta
     return page
 
@@ -40,6 +41,7 @@ def page(request, slug='index'):
 
 	if page._meta is not None:
 		meta = page._meta.render(Context())
+		print(meta)
 		extra_context = json.loads(meta)
 		context.update(extra_context)
 	# Passes the page and slug context to be rendered by the page.html layout template
