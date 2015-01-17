@@ -18,6 +18,9 @@ class Command(BaseCommand):
 		"""Request pages and build output"""
 		# DEBUG is False
 		settings.DEBUG = False
+		# Enable Compressor
+		settings.COMPRESS_ENABLED = True
+		
 		if args: # Check if any arguments is passed by the client
 			pages = args
 			available = list(get_pages())
