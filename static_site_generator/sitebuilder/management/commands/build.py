@@ -16,6 +16,8 @@ class Command(BaseCommand):
 
 	def handle(self, *args, **options):
 		"""Request pages and build output"""
+		# DEBUG is False
+		settings.DEBUG = False
 		if args: # Check if any arguments is passed by the client
 			pages = args
 			available = list(get_pages())
@@ -34,6 +36,7 @@ class Command(BaseCommand):
 			os.makedirs(settings.STATIC_ROOT)
 		# Copy all of the site static resources in the STATIC_ROOT
 		call_command('collectstatic', interactive=False, clear=True, verbosity=0)
+		call_command('compress', interactive=False, force=True)
 		client = Client()
 		for page in pages:
 			# Collect all the '.html' files
