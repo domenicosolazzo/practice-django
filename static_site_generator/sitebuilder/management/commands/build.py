@@ -25,7 +25,7 @@ class Command(BaseCommand):
 		client = Client()
 		for page in get_pages(url):
 			# Collect all the '.html' files
-			url = reverse('page', kwargs{'slug':page})
+			url = reverse('page', kwargs={'slug':page})
 			response = client.get(url)
 			if page == 'index':
 				output_dir = settings.SITE_OUTPUT_DIRECTORY
