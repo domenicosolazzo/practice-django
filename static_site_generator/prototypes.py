@@ -1,12 +1,15 @@
 import sys
-
+import os
 from django.conf import settings
+
 BASE_DIR = os.path.dirname(__file__)
+
 settings.configure(
     DEBUG=True,
     SECRET_KEY='b0mqvak1p2sqm6p#+8o8fyxf+ox(le)8&jh_5^sxa!=7!+wxj0',
     ROOT_URLCONF='sitebuilder.urls',
     MIDDLEWARE_CLASSES=(),
+    #ALLOWED_HOSTS="127.0.0.1",
     INSTALLED_APPS=(
         'django.contrib.staticfiles',
         'django.contrib.webdesign',                                         
@@ -18,4 +21,5 @@ settings.configure(
 
 if __name__ == "__main__":
 	from django.core.management import execute_from_command_line
+    
 	execute_from_command_line(sys.argv)
