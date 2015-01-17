@@ -15,8 +15,12 @@ settings.configure(
         'django.contrib.webdesign',                                         
         'sitebuilder',
     ),
-    STATIC_URL='/static/',
-    SITE_PAGES_DIRECTORY=os.path.join(BASE_DIR, 'pages')
+    STATIC_URL='/static/', 
+    SITE_PAGES_DIRECTORY=os.path.join(BASE_DIR, 'pages'),
+    # Output directory where the statically generated files will live once the command has completed
+    SITE_OUTPUT_DIRECTORY=os.path.join(BASE_DIR, '_build'),
+    # Enable static content to live inside _build directory
+    STATIC_ROOT=os.path.join(BASE_DIR, '_build', 'static'),
 )
 
 if __name__ == "__main__":
