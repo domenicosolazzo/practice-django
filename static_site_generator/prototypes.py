@@ -14,6 +14,7 @@ settings.configure(
         'django.contrib.staticfiles',
         'django.contrib.webdesign',                                         
         'sitebuilder',
+        'compressor'
     ),
     STATIC_URL='/static/', 
     SITE_PAGES_DIRECTORY=os.path.join(BASE_DIR, 'pages'),
