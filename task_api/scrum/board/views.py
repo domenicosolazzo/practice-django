@@ -12,8 +12,8 @@ class DefaultsMixin(object):
 		authentication.TokenAuthentication
 	)
 	permission_classes = (
-		permissions.IsAuthenticated
-	)
+        permissions.IsAuthenticated,
+    )
 	paginate_by = 25
 	paginate_by_param = 'page_size'
 	max_paginate_by = 100
@@ -38,4 +38,3 @@ class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
 	queryset = User.objects.order_by(User.USERNAME_FIELD)
 	serializer_class = UserSerializer
 
-	
