@@ -28,7 +28,7 @@ class TaskSerializer(serializers.ModelSerializer):
 	# Show the username of the user (foreign key)
 	assigned = serializers.SlugRelatedField(
         slug_field=User.USERNAME_FIELD, required=False, read_only=True)
-	status_display = serializers.SerializerMethodField('get_status_display')
+	status_display = serializers.SerializerMethodField('get_status_field')
 	links = serializers.SerializerMethodField()
 
 	
