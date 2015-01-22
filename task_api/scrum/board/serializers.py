@@ -10,13 +10,14 @@ User = get_user_model()
 class SprintSerializer(serializers.ModelSerializer):
 	# Get own links
 	links = serializers.SerializerMethodField('get_links')
-	request = self.context['request']
-
+	
 	class Meta:
 		model = Sprint
 		fields = ('id', 'name', 'description', 'end', )
 
 	def get_links(self, obj):
+		request = self.context['request']
+
 		return {
 			'self': reverse('sprint-detail', kwargs={'pk':obj.pk}, request=request)
 		}
@@ -29,8 +30,7 @@ class TaskSerializer(serializers.ModelSerializer):
 	status_display = serializers.serializers.SerializerMethodField('get_status_display')
 	links = serializers.SerializerMethodField('get_links')
 
-	request = self.context['request']
-
+	
 	class Meta:
 		model = Task
 		fields = ('id', 'name', 'description', 'sprint', 'status', 'status_display',
@@ -40,9 +40,17 @@ class TaskSerializer(serializers.ModelSerializer):
 		return obj.get_status_display()
 
 	def get_links(self, obj):
-		return {
-			'self': reverse('task-detail', kwargs={'pk':obj.pk}, request=request)
+		request = self.context['request']
+		links = {
+			'self':reverse('task-detail', kwargs={'pk':obj.pk}, request=request),
+			'sprint': None,
+			'assigned': None
 		}
+		if obj.sprint_id:
+			links['sprint'] = reverse('sprint-detail', kwargs={'pk': obj.sprint_id}, request=request)
+		if obj.assigned:
+			links['assigned'] = reverse('user-detail', kwargs={User.USERNAME_FIELD:obj.assigned}, request=request)
+		return links
 
 
 
@@ -50,7 +58,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 	full_name = serializers.CharField(source='get_full_name', read_only=True)
 	links = serializers.SerializerMethodField('get_links')
-	request = self.context['request']
 
 	class Meta:
 		model = User
@@ -58,6 +65,8 @@ class UserSerializer(serializers.ModelSerializer):
 
 	def get_links(self, obj):
 		username = obj.get_username()
+		request = self.context['request']
+
 		return {
 			'self': reverse('user-detail', kwargs={User.USERNAME_FIELD:username}, request=request)
 		}
