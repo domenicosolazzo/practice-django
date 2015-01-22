@@ -9,6 +9,9 @@ class SprintSerializer(serializers.ModelSerializer):
 
 class TaskSerializer(serializers.ModelSerializer):
 
+	# Show the username of the user (foreign key)
+	assigned = serializers.SlugRelatedField(slug_field=User.USERNAME_FIELD, required=False)
+
 	status_display = serializers.serializers.SerializerMethodField('get_status_display')
 	class Meta:
 		model = Task
