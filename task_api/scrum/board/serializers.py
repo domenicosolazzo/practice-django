@@ -5,6 +5,7 @@ from .models import Sprint, Task
 
 
 # Fetch the user model
+print get_user_model
 User = get_user_model()
 
 class SprintSerializer(serializers.ModelSerializer):
@@ -26,8 +27,9 @@ class SprintSerializer(serializers.ModelSerializer):
 class TaskSerializer(serializers.ModelSerializer):
 
 	# Show the username of the user (foreign key)
-	assigned = serializers.SlugRelatedField(slug_field=User.USERNAME_FIELD, required=False)
-	status_display = serializers.serializers.SerializerMethodField('get_status_display')
+	assigned = serializers.SlugRelatedField(
+        slug_field=User.USERNAME_FIELD, required=False, read_only=True)
+	status_display = serializers.SerializerMethodField('get_status_display')
 	links = serializers.SerializerMethodField('get_links')
 
 	
