@@ -1,4 +1,4 @@
-Django==1.7.3
+Django==2.2.24
 Markdown==2.5.2
 django-filter==0.9.1
 djangorestframework==3.0.3
